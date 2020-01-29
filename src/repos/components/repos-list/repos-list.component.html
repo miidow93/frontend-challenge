@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row border mb-3" *ngFor="let item of repos | async">
+
+        <div class="col-5">
+            <img [src]="createImage(item.avatar_url)" class="mx-auto d-block" alt="item.name" />
+        </div>
+
+        <div class="col-7">
+            <h2>{{item.name}}</h2>
+            <p>{{item.description}}</p>
+            <div>
+                <span class="border">Stars: {{item.stars}}</span>
+                <span class="border ml-3">Issues: {{item.issues}}</span>
+                <span class="ml-4">Submitted 30 days ago by {{item.login}}</span>
+            </div>
+        </div>
+
+    </div>
+</div>
